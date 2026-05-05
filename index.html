@@ -1,26 +1,33 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Uma Clicker</title>
-
-	<link rel="stylesheet" href="./assets/css/styles.css">
-	
+  <meta charset="utf-8">
+  <title>Uma Clicker</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
+
 <body>
+  <h1>Run!</h1>
 
+  <button type="button" id="umaButton">
+    <img id="umaCharacter" src="" alt="Uma character">
+  </button>
 
-<h1>Run!</h1>
+  <div id="umaDisplay">You have ran 0 Miles.</div>
 
-<button type = "button" id="umaButton">
-	
-	<img src = "assets/img/SpecialWeek1.png">
+  <script>
+    const chibiCharacters = [
+      "assets/img/CurrenChanChibi1.webp",
+      "assets/img/GoldShipChibi1.webp",
+      "assets/img/HaruUraraChibi1.webp",
+      "assets/img/MatikaneTannhauserChibi1.webp",
+      "assets/img/NiceNatureChibi1.webp"
+    ];
 
-	</button>
-<div id ="umaDisplay">You have ran 0 Miles.</div>
+    const randomIndex = Math.floor(Math.random() * chibiCharacters.length);
+    document.getElementById("umaCharacter").src = chibiCharacters[randomIndex];
+  </script>
 
-
-
-	<script src="./assets/js/main.js"></script>
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>
