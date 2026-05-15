@@ -3,10 +3,23 @@
 <head>
   <meta charset="utf-8">
   <title>Uma Clicker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body>
+  <button type="button" id="newCharacterBtn" class="corner-control" aria-label="New character">
+    <img id="newCharacterIcon" src="assets/img/gachaticket.png" alt="">
+  </button>
+
+  <button type="button" id="musicToggle" class="corner-control" aria-pressed="false" aria-label="Mute music">
+    <img id="musicToggleIcon" src="" alt="">
+  </button>
+
+  <audio id="bgMusic" src="assets/audio/umapyoi.mp3" loop preload="auto"></audio>
+
   <h1>Run!</h1>
 
   <button type="button" id="umaButton">
@@ -14,7 +27,9 @@
   </button>
 
   <div id="umaDisplay">You have ran 0 Miles.</div>
+  <div id="celebrationMsg" class="hidden" aria-hidden="true">Umazing!</div>
 
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 </html>
